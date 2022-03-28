@@ -18,19 +18,19 @@ public class Inheritance4 {
   public static void main(String[] args) {
   }
 
-  public class Manager {
-
-  }
-
-  public class Chief {
-
-  }
-
   public class Employee {
 
   }
 
-  public class Secretary {
+  public class Manager extends Employee {
+
+  }
+
+  public class Chief extends Employee {
+
+  }
+
+  public class Secretary extends Employee {
 
   }
 }

@@ -17,5 +17,7 @@ public class Method7 {
 
   }
 
-  //напишите тут ваш код
+  public static long cube(long a){
+    return a*a*a;
+  }
 }

@@ -29,13 +29,28 @@ public class Method14 {
   }
 
   public static String getObjectType(Object o) {
-    //напишите тут ваш код
+    if (o instanceof Tiger)
+      return "Тигр";
 
-    return "Животное";
+    if (o instanceof Lion)
+      return "Лев";
+
+    if (o instanceof Bull)
+      return "Бык";
+
+    if (o instanceof Cow)
+      return "Корова";
+
+    if (o instanceof Cat)
+      return "Кот";
+
+    if (o instanceof Animal)
+      return "Животное";
+
+    return null;
   }
 
-  public static class Cat extends Animal   //<--Классы наследуются!!
-  {
+  public static class Cat extends Animal {
   }
 
   public static class Tiger extends Cat {

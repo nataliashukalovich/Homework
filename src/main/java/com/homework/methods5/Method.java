@@ -19,6 +19,11 @@ package com.homework.methods5;
 
 public class Method {
   public static void main(String[] args) {
+    printHydrogenInfo();
+    printJavaInfo();
+  }
+
+  public static void printHydrogenInfo(){
     System.out.println("Водород:");
     System.out.println("Это химический элемент периодической системы с обозначением H и атомным номером 1.");
     System.out.println("Является самым легким элементом таблицы.");
@@ -27,7 +32,9 @@ public class Method {
     System.out.println("-Нефтеперерабатывающей промышленности;");
     System.out.println("-Авиации;");
     System.out.println("-Электроэнергетике.");
+  }
 
+  public static void printJavaInfo(){
     System.out.println("Остров Ява:");
     System.out.println("Входит в состав Индонезии.");
     System.out.println("На острове зародились государства Матарам, Маджапахит, Демак.");

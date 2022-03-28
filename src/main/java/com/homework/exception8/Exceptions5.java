@@ -13,13 +13,11 @@ import java.util.Scanner;
 public class Exceptions5 {
 
   public static void main(String[] args) {
-
+    Scanner scanner = new Scanner(System.in);
+    buyElephant(null, scanner);
   }
 
-  static void buyElephant(
-      String answer,
-      Scanner scanner
-  ) {
+  static void buyElephant(String answer, Scanner scanner) {
     if (answer == null) {
       System.out.println("Купи слона");
     } else if (answer.toLowerCase().equals("ок")) {

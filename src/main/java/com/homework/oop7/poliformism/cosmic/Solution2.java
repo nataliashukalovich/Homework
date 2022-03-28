@@ -30,7 +30,14 @@ public class Solution2 {
   }
 
   public static void runWorkingProcess() {
-    //напишите тут ваш код
+    Human human1 = (Human) astronauts.get(0);
+    pilot(human1);
+    Human human2 = (Human) astronauts.get(1);
+    pilot(human2);
+    Dog dog = (Dog) astronauts.get(2);
+    createDirection(dog);
+    Cat cat = (Cat) astronauts.get(3);
+    research(cat);
   }
 
   public static void pilot(Human human){
@@ -46,10 +53,10 @@ public class Solution2 {
   }
 
   public static void createCrew() {
-//    astronauts.add(new Human());
-//    astronauts.add(new Human());
-//    astronauts.add(new Dog());
-//    astronauts.add(new Cat());
+    astronauts.add(new Human());
+    astronauts.add(new Human());
+    astronauts.add(new Dog());
+    astronauts.add(new Cat());
   }
 
   public static void printCrewInfo() {

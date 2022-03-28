@@ -31,13 +31,17 @@ public class Map1 {
     grades.put("Марчук Любослав", 3.2d);
   }
 
-  //реализовать метод printStudents, который выводит только имена всех студентов (ключ коллекции);
   public static void printStudents() {
-    //напишите тут ваш код
+    for (String name : grades.keySet()) {
+      System.out.println(name);
+    }
   }
 
-  //реализовать метод getAverageMark, который возвращает средний балл всех студентов.
   public static Double getAverageMark() {
-    return null;//напишите тут ваш код
+    Double identity = 0d;
+    for (Double value : grades.values()) {
+      identity += value;
+    }
+    return identity / grades.size();
   }
 }

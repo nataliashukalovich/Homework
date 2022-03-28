@@ -29,7 +29,15 @@ public class Solution3 {
   }
 
   public static void runWorkingProcess() {
-    //напишите тут ваш код
+    for (Astronaut astronaut : astronauts) {
+      if (astronaut instanceof Human) {
+        pilot((Human) astronaut);
+      } else if (astronaut instanceof Dog) {
+        createDirection((Dog) astronaut);
+      } else {
+        research((Cat) astronaut);
+      }
+    }
   }
 
   public static void pilot(Human human) {
@@ -37,7 +45,7 @@ public class Solution3 {
   }
 
   public static void createDirection(Dog dog) {
-    System.out.println("Член экипажа " + dog.getInfo() + " занимается созданием навигационного маршрута.");
+    System.out.println("Член экипажа " + dog.getInfo() + " занимается созданием маршрута.");
   }
 
   public static void research(Cat cat) {
@@ -45,10 +53,10 @@ public class Solution3 {
   }
 
   public static void createCrew() {
-//    astronauts.add(new Human());
-//    astronauts.add(new Human());
-//    astronauts.add(new Dog());
-//    astronauts.add(new Cat());
+    astronauts.add(new Human());
+    astronauts.add(new Human());
+    astronauts.add(new Dog());
+    astronauts.add(new Cat());
   }
 
   public static void printCrewInfo() {

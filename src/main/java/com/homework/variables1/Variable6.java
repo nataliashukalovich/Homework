@@ -13,10 +13,14 @@ package com.homework.variables1;
 public class Variable6 {
 
   public static void main(String[] args) {
+    // объявляем переменную emptiness типа String и присваиваем ей значение
     String emptiness = "пустота";
 
-    String fullness = ""; //напишите тут ваш код
+    // объявляем переменную fullness типа String и присваиваем ей результат
+    // соединения (конкатенации) строки emptiness с пробелами " "
+    String fullness = emptiness + " " + emptiness + " " + emptiness;
 
+    // выводим на экран значение переменной fullness
     System.out.println(fullness);
   }
 }

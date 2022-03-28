@@ -1,4 +1,4 @@
-package com.homework.hashmap;
+package com.homework.hashmap10;
 
 public class StringsLinkedList {
   private Node first = new Node();
@@ -13,7 +13,17 @@ public class StringsLinkedList {
   }
 
   public void add(String value) {
-    //напишите тут ваш код
+    Node prev;
+    if (last.prev == null) {
+      prev = first;
+    } else {
+      prev = last.prev;
+    }
+    Node newNode = new Node();
+    newNode.value = value;
+    newNode.prev = prev;
+    prev.next = newNode;
+    last.prev = newNode;
   }
 
   public static class Node {

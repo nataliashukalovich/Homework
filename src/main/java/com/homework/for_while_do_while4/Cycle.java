@@ -14,8 +14,11 @@ package com.homework.for_while_do_while4;
 public class Cycle {
 
   public static void main(String[] args) {
-    String quote = "Я никогда не буду работать за копейки. Амиго";
-    //напишите тут ваш код
-
+    String quote = "Я никогда не буду работать за копейки. Кирилл";
+    int i = 0;
+    while (i < 100) {
+      System.out.println(quote);
+      i++;
+    }
   }
 }

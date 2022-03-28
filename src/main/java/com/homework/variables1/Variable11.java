@@ -1,5 +1,7 @@
 package com.homework.variables1;
 
+import java.util.Scanner;
+
 /**
  * Давай разделим ящик колы на кабинет программистов. Для этого напишем программу, в которой:
  *
@@ -21,7 +23,12 @@ package com.homework.variables1;
 public class Variable11 {
 
   public static void main(String[] args) {
-    //напишите тут ваш код
+      Scanner scanner = new Scanner(System.in);
 
+      int firstNumber = scanner.nextInt();
+      int secondNumber = scanner.nextInt();
+
+      double result = firstNumber * 1.0 / secondNumber;
+      System.out.println(result);
   }
 }

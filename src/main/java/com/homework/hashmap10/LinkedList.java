@@ -1,6 +1,4 @@
-package com.homework.hashmap;
-
-import com.homework.hashmap.StringsLinkedList;
+package com.homework.hashmap10;
 
 /**
  * Пришло время познакомиться с двусвязным списком. Решая эту задачу ты поймешь,

@@ -1,4 +1,4 @@
-package com.homework.hashmap;
+package com.homework.hashmap10;
 
 import java.util.HashMap;
 
@@ -21,6 +21,10 @@ public class Map {
   }
 
   public static void addStudents() {
-    //напишите тут ваш код
+    grades.put("Давыдов Олег", 4.3d);
+    grades.put("Шульга Николай", 4.1d);
+    grades.put("Колос Василий", 4.9d);
+    grades.put("Шевченко Тарас", 3.7d);
+    grades.put("Марчук Любослав", 3.2d);
   }
 }

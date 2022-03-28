@@ -9,15 +9,15 @@ public class Person {
     this.lastName = lastName;
   }
 
-  protected String getFirstName() {
+  public String getFirstName() {
     return firstName;
   }
 
-  String getLastName() {
+  public String getLastName() {
     return lastName;
   }
 
-  private String getFullName(){
+  public String getFullName(){
     return firstName + " " + lastName;
   }
 }

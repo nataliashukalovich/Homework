@@ -21,8 +21,8 @@ package com.homework.exception8;
 public class Exceptions6 {
 
   public static void main(String[] args) {
-    Lion lion = new Lion(); // перейдите в класс Lion ctrl + клик на Lion
-    lion.eat(new Food("мясо")); // перейдите в класс Food ctrl + клик на Food
+    Lion lion = new Lion();
+    lion.eat(new Food("мясо"));
     lion.eat(null);
   }
 }

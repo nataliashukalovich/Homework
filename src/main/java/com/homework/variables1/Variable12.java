@@ -1,5 +1,7 @@
 package com.homework.variables1;
 
+import java.util.Scanner;
+
 /**
  * Обычно скорость ветра указывается в м/с и не всегда понятно, насколько это много или мало.
  * Привычнее видеть величину скорости в км/ч, как у автомобиля, велосипеда или другого транспорта.
@@ -18,7 +20,9 @@ package com.homework.variables1;
 public class Variable12 {
 
   public static void main(String[] args) {
-    //напишите тут ваш код
-
+    Scanner scanner = new Scanner(System.in);
+    double speedInMetersPerSecond = scanner.nextInt();
+    int speedInKilometersPerHour = (int) Math.round(speedInMetersPerSecond * 3.6);
+    System.out.println(speedInKilometersPerHour);
   }
 }

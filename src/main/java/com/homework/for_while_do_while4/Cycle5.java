@@ -1,5 +1,7 @@
 package com.homework.for_while_do_while4;
 
+import java.util.Scanner;
+
 /**
  * Вывести на экран сумму чисел от 1 до 100 включительно, не кратных 3. Для этого используй цикл while.
  *
@@ -13,7 +15,13 @@ package com.homework.for_while_do_while4;
 public class Cycle5 {
 
   public static void main(String[] args) {
-    //напишите тут ваш код
-
+    Scanner console = new Scanner(System.in);
+    while (true) {
+      String s = console.nextLine();
+      if (s.equals("enough")) {
+        break;
+      }
+      System.out.println(s);
+    }
   }
 }

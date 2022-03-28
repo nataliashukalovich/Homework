@@ -14,10 +14,15 @@ package com.homework.variables1;
 public class Variable2 {
 
   public static void main(String[] args) {
+    // объявляем переменную centimeters типа int и сразу же в строке
+    // объявления присваиваем ей значение 243
     int centimeters = 243;
 
-    int meters = 0; //напишите тут ваш код
+    // объявляем переменную meters типа int и присваиваем ей значение -
+    // результат вычисления выражения centimeters / 100
+    int meters = centimeters / 100;
 
+    // выводим на экран значение переменной meters
     System.out.println(meters);
   }
 }

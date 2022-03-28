@@ -24,7 +24,7 @@ public class Inheritance2 {
     }
   }
 
-  public class Human {
+  public class Human extends Entity {
     public void move(){
       System.out.println("Я передвигаюсь.");
     }
@@ -38,7 +38,7 @@ public class Inheritance2 {
     }
   }
 
-  public class JavaDeveloper {
+  public class JavaDeveloper extends Human{
     public void move(){
       System.out.println("Я передвигаюсь.");
     }

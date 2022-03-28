@@ -1,6 +1,7 @@
 package com.homework.arraylist9;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * В классе List8 объявлены методы, которые тебе нужно реализовать следующим образом:
@@ -20,6 +21,8 @@ import java.util.ArrayList;
  */
 
 public class List8 {
+
+  public static String bug = "bug";
 
   public static void main(String[] args) {
     ArrayList<String> words = new ArrayList<>();
@@ -50,14 +53,31 @@ public class List8 {
   }
 
   public static void removeBugWithFor(ArrayList<String> list) {
-    //напишите тут ваш код
+    for (int i = 0; i < list.size(); i++) {
+      String str = list.get(i);
+      if (bug.equalsIgnoreCase(str)) {
+        list.remove(str);
+        i--;
+      }
+    }
   }
 
   public static void removeBugWithWhile(ArrayList<String> list) {
-    //напишите тут ваш код
+    Iterator<String> it = list.iterator();
+    while (it.hasNext()) {
+      String str = it.next();
+      if (bug.equalsIgnoreCase(str)) {
+        it.remove();
+      }
+    }
   }
 
   public static void removeBugWithCopy(ArrayList<String> list) {
-    //напишите тут ваш код
+    ArrayList<String> listCopy = new ArrayList<>(list);
+    for (String str : listCopy) {
+      if (bug.equalsIgnoreCase(str)) {
+        list.remove(str);
+      }
+    }
   }
 }

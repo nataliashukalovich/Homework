@@ -47,9 +47,20 @@ public class Exceptions3 {
       if (input.toLowerCase().equals(EXIT)) {
         break;
       }
+      int studentId;
 
-      int studentId = Integer.parseInt(input);
-      System.out.println(ANSWERING + studentsJournal.get(studentId));
+      try {
+        studentId = Integer.parseInt(input);
+        System.out.println(ANSWERING + studentsJournal.get(studentId));
+
+      } catch (NumberFormatException e) {
+        System.out.println("Нужно ввести целое число");
+        continue;
+      }
+
+      catch (ArrayIndexOutOfBoundsException e) {
+        System.out.println("Студента с таким номером не существует");
+      }
     }
   }
 }

@@ -1,11 +1,17 @@
 package com.homework.stream11;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Scanner;
 
 /**
- * У Амиго появилась задача: записать байты в файл. Он написал программу, которая считывает из консоли путь к файлу и записывает в этот файл последовательность байтов, полученную из аргумента метода main(String[]). Но в процессе написания программы он допустил ошибку.
+ * Задача: записать байты в файл.
+ * Написать программу, которая считывает из консоли путь к файлу и записывает в этот файл последовательность байтов,
+ * полученную из аргумента метода main(String[]). Но в процессе написания программы допустили ошибку.
  * Как ты уже знаешь, BufferedWriter "не работает" с байтами: для записи байтов в файл нужно использовать метод write(Path, byte[]) класса Files.
- * Path можно получить используя статический метод Path.of(), в который передать путь к файлу, считанный из консоли. Выглядит это так - Path.of(scanner.nextLine()). Помоги Амиго исправить программу.
+ * Path можно получить используя статический метод Path.of(), в который передать путь к файлу, считанный из консоли.
+ * Выглядит это так - Path.of(scanner.nextLine()).
  * Требования:
  * •	Программа должна считать из консоли путь к файлу.
  * •	Программа должна записывать байты в файл.
@@ -16,13 +22,8 @@ import java.io.IOException;
 public class Stream6 {
 
   public static void main(String[] args) throws IOException {
-//    byte[] bytes = args[0].getBytes();
-//    try (InputStream stream = System.in;
-//        Scanner scanner = new Scanner(stream);
-//        BufferedWriter bufferedWriter = Files.newBufferedWriter(Path.of(scanner.nextLine()))) {
-//      bufferedWriter.write(bytes);
-//    } catch (IOException e) {
-//      System.out.println("Something went wrong : " + e);
-//    }
+    byte[] bytes = args[0].getBytes();
+    Scanner scanner = new Scanner(System.in);
+    Files.write(Path.of(scanner.nextLine()), bytes);
   }
 }
