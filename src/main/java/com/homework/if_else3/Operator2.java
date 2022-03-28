@@ -20,11 +20,9 @@ public class Operator2 {
     Scanner scanner = new Scanner(System.in);
     int age = scanner.nextInt();
     scanner.close();
-    if (age < 18) {
-      if (age > 5) {
+    if (age < 18 && age > 5) {
         System.out.println("нужно ходить в школу");
-      }
-    } else {
+    } else if (age > 18){
       System.out.println("пора в институт");
     }
   }

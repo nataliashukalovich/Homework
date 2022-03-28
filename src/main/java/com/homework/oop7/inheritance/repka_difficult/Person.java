@@ -9,6 +9,10 @@ public class Person {
     this.namePadezh = namePadezh;
   }
 
+  public void pull(Person second) {
+    System.out.println(name + " за " + second.getNamePadezh());
+  }
+
   public String getName() {
     return name;
   }
