@@ -1,4 +1,4 @@
-package com.homework.oop7.inheritance;
+package com.homework.oop7.inheritance.solution.task6;
 
 /**
  * Класс Person объявлен как абстрактный. Это значит, что мы не можем создавать его экземпляры.
@@ -15,22 +15,22 @@ package com.homework.oop7.inheritance;
 
 public class Person {
 
-  private String name;
-  private int age;
+    private String name;
+    private int age;
 
-  public String getName() {
-    return name;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public int getAge() {
-    return age;
-  }
+    public int getAge() {
+        return age;
+    }
 
-  public void setAge(int age) {
-    this.age = age;
-  };
+    public void setAge(int age) {
+        this.age = age;
+    };
 }

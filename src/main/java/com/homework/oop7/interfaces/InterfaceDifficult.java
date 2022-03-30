@@ -27,10 +27,7 @@ public class InterfaceDifficult {
   }
 
   interface DBObject {
-    DBObject initializeIdAndName(
-        long id,
-        String name
-    );
+    DBObject initializeIdAndName(long id, String name);
   }
 
   static class User {
