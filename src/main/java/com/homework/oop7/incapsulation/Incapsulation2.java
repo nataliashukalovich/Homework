@@ -17,9 +17,9 @@ public class Incapsulation2 {
   }
 
   public class Cat {
-    private String name;
-    private int age;
-    private int weight;
+    public String name;
+    public int age;
+    public int weight;
 
     public Cat(String name, int age, int weight) {
       this.name = name;
@@ -31,7 +31,7 @@ public class Incapsulation2 {
       return name;
     }
 
-    private void setName(String name) {
+    public void setName(String name) {
       this.name = name;
     }
 
@@ -39,7 +39,7 @@ public class Incapsulation2 {
       return age;
     }
 
-    private void setAge(int age) {
+    public void setAge(int age) {
       this.age = age;
     }
   }

@@ -2,8 +2,7 @@ package com.homework.oop7.inheritance;
 
 /**
  * Класс Person объявлен как абстрактный. Это значит, что мы не можем создавать его экземпляры.
- * Сделай из данного класса обычный, допиши недостающую логику, которая отвечает общепринятым подходам к
- инкапсуляции:
+ * Сделай из данного класса обычный, допиши недостающую логику, которая отвечает общепринятым подходам к инкапсуляции:
  * геттеры должны возвращать, а сеттеры — устанавливать значения соответствующим полям.
  * Требования:
  * •	Класс Person не должен быть абстрактным.
@@ -13,14 +12,11 @@ package com.homework.oop7.inheritance;
  * •	Метод setAge(int) должен устанавливать переданное значение полю age.
  */
 
-public class Person {
-
+public abstract class Person {
   private String name;
   private int age;
 
-  public String getName() {
-    return name;
-  }
+  public abstract String getName();
 
   public void setName(String name) {
     this.name = name;
@@ -30,7 +26,5 @@ public class Person {
     return age;
   }
 
-  public void setAge(int age) {
-    this.age = age;
-  };
+  public abstract void setAge(int age);
 }

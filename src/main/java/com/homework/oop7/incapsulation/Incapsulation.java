@@ -22,19 +22,19 @@ public class Incapsulation {
 }
 
 class Cat {
-  private String name;
-  private int speed;
+  public String name;
+  public int speed;
 
   public Cat(String name, int speed) {
     this.name = name;
     this.speed = speed;
   }
 
-  private String getName() {
+  public String getName() {
     return name;
   }
 
-  int getSpeed() {
+  public int getSpeed() {
     return speed;
   }
 
@@ -44,19 +44,19 @@ class Cat {
 }
 
 class Dog {
-  private String name;
-  private int speed;
+  public String name;
+  public int speed;
 
   public Dog(String name, int speed) {
     this.name = name;
     this.speed = speed;
   }
 
-  private String getName() {
+  public String getName() {
     return name;
   }
 
-  int getSpeed() {
+  public int getSpeed() {
     return speed;
   }
 
