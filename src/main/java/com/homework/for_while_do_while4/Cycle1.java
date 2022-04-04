@@ -1,5 +1,7 @@
 package com.homework.for_while_do_while4;
 
+import java.util.Scanner;
+
 /**
  * Ввести с клавиатуры имя и, используя цикл while, 10 раз вывести: <имя> любит меня (переменная text).
  * Каждый вывод - с новой строки.
@@ -23,9 +25,20 @@ package com.homework.for_while_do_while4;
 
 public class Cycle1 {
 
-  public static void main(String[] args) {
-    String text = " любит меня.";
-    //напишите тут ваш код
+    public static void main(String[] args) {
 
-  }
-}
+        System.out.println("Введите имя : ");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+
+        String text = " любит меня.";
+        int i = 0;
+        int count = 10;
+
+        while(i<=count) {
+            System.out.println(name + text);
+            i++;
+        }
+        }
+    }
+

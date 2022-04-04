@@ -15,7 +15,14 @@ public class Cycle {
 
   public static void main(String[] args) {
     String quote = "Я никогда не буду работать за копейки. Амиго";
-    //напишите тут ваш код
+    int number = 100;
+    int i = 0;
+
+    while (i < number) {
+      System.out.println(quote);
+      i++;
+    }
 
   }
 }
+

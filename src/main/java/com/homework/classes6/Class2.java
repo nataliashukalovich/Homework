@@ -2,7 +2,8 @@ package com.homework.classes6;
 
 /**
  *
- В методе main конвертируй строку string в тип double с помощью статического метода parseDouble класса Double.
+ В методе main конвертируй строку string в тип double с помощью статического метода parseDouble
+ класса Double.
  Затем округли полученное значение, используя статический метод round класса Math.
  Результат выведи на экран.
  Требования:
@@ -15,7 +16,14 @@ public class Class2 {
 
   public static void main(String[] args) {
     String string = "12.84";
-    //напишите тут ваш код
+    parseDouble(string);
   }
+
+  public static double parseDouble(String string) {
+    double a = Double.parseDouble(string);
+    System.out.println(Math.round(a));
+    return a;
+  }
+
 }
 
