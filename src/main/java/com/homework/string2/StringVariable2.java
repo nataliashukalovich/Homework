@@ -1,5 +1,7 @@
 package com.homework.string2;
 
+import java.util.Scanner;
+
 /**
  * Напиши программу, которая будет сравнивать введенную строку со строкой из переменной secret, не учитывая регистр.
  * Если введенная строка равна строке из переменной secret, программа выводит на экран сообщение "доступ разрешен". В ином случае - "доступ запрещен".
@@ -15,13 +17,15 @@ package com.homework.string2;
 */
 
 public class StringVariable2 {
-
   public static String secret = "AmIGo";
 
   public static void main(String[] args) {
-    //напишите тут ваш код
-    System.out.println("доступ разрешен");
-    //напишите тут ваш код
-    System.out.println("доступ запрещен");
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Введите строку : ");
+    String second = scanner.nextLine();
+
+    String result = second.equals(secret) ? "доступ разрешен" : "доступ запрещен";
+    System.out.println(result);
+    }
   }
-}
+

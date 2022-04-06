@@ -1,8 +1,5 @@
 package com.homework.arraylist9;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 /**
  * Перед тобой программа, которая сортирует элементы списка по возрастанию методом "пузырька"(гуглим что то такое).
  * Перепиши код, чтобы вместо списка ArrayList<Integer> numbers использовался массив int[] numbers.
@@ -15,7 +12,9 @@ import java.util.Arrays;
 
 public class List1 {
 
-  public static ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(56, 45, 89, 1, 45, 13, 4, 69, 11, -89)); // обратите внимание на инициализацию
+  // public static int[] numbers = new ArrayList<Integer>(Arrays.asList(56, 45, 89, 1, 45, 13, 4, 69, 11, -89)).toArray(); // обратите внимание на инициализацию
+
+  public static int[] numbers = new int[] {56, 45, 89, 1, 45, 13, 4, 69, 11, -89};
 
   public static void main(String[] args) {
     print();
@@ -25,12 +24,12 @@ public class List1 {
   }
 
   public static void sort() {
-    for (int i = 0; i < numbers.size() - 1; i++) {
-      for (int j = 0; j < numbers.size() - i - 1; j++) {
-        if (numbers.get(j) > numbers.get(j + 1)) {
-          int temp = numbers.get(j);
-          numbers.set(j, numbers.get(j + 1));
-          numbers.set(j + 1, temp);
+    for (int i = 0; i < numbers.length - 1; i++) {
+      for (int j = 0; j < numbers.length - i - 1; j++) {
+        if (numbers[j] > numbers[j + 1]) {
+          int temp = numbers[j];
+          numbers[j] = numbers[j + 1];
+          numbers[j + 1] = temp;
         }
       }
     }

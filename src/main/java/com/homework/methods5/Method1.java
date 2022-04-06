@@ -1,5 +1,7 @@
 package com.homework.methods5;
 
+import org.w3c.dom.ls.LSOutput;
+
 /**
  * Перед тобой — плохой пример использования методов:
  *
@@ -16,14 +18,10 @@ package com.homework.methods5;
 public class Method1 {
 
   public static void main(String[] args) {
-    //напишите тут ваш код
-    print1();
-    print2();
-  }
-  public static void print1(){
-    System.out.println("Я — поэт, зовусь я Цветик.");
-  }
-  public static void print2(){
-    System.out.println("От меня вам всем приветик.");
+
+    String a = "Я — поэт, зовусь я Цветик.";
+    String b = "От меня вам всем приветик.";
+
+    System.out.printf("%s\n%s", a, b);
   }
 }

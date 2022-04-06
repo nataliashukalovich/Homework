@@ -12,7 +12,7 @@ package com.homework.arraylist9;
  * •	Метод reverse() должен переставить значения списка numbers в обратном порядке.
  */
 
-public class List {
+public class List<S> {
 
   public static int[] numbers = new int[10];
 

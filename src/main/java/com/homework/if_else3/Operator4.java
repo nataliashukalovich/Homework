@@ -20,11 +20,15 @@ public class Operator4 {
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
+    System.out.println("Введите температуру тела : ");
     double bodyTemperature = scanner.nextDouble();
-    //напишите тут ваш код
-    if (bodyTemperature > 37) {
+
+    isHigh = (bodyTemperature > 36.6);
+    isLow = (bodyTemperature < 36.6);
+
+    if (isHigh) {
       System.out.println("температура тела высокая");
-    } else if (bodyTemperature < 36){
+    } else if (isLow){
       System.out.println("температура тела низкая");
     } else {
       System.out.println("температура тела нормальная");
