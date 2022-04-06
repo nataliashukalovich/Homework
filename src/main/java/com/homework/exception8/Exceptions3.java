@@ -4,17 +4,22 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
+
 /**
  * Программа считывает с консоли номер, находит в журнале соответствующего студента и вызывает его отвечать.
  * Методы parseInt и get могут бросать исключения NumberFormatException и ArrayIndexOutOfBoundsException.
  * Оберни их одним блоком try с двумя блоками catch.
  * Блок catch для NumberFormatException должен выводить сообщение: "Нужно ввести целое число",
- * а блок catch для ArrayIndexOutOfBoundsException должен выводить сообщение: "Студента с таким номером не существует".
+ * а блок catch для ArrayIndexOutOfBoundsException должен выводить сообщение:
+ * "Студента с таким номером не существует".
  * Требования:
  * •	Программа должна продолжить работу при возникновении NumberFormatException.
- * •	Программа должна выводить сообщение: "Нужно ввести целое число" каждый раз при возникновении NumberFormatException.
+ * •	Программа должна выводить сообщение: "Нужно ввести целое число"
+ каждый раз при возникновении NumberFormatException.
  * •	Программа должна продолжить работу при возникновении ArrayIndexOutOfBoundsException.
- * •	Программа должна выводить сообщение: "Студента с таким номером не существует" каждый раз при возникновении ArrayIndexOutOfBoundsException.
+ * •	Программа должна выводить сообщение: "Студента с таким номером не существует"
+ каждый раз при возникновении ArrayIndexOutOfBoundsException.
  * •	В программе должен быть один блок try и два блока catch.
  */
 
@@ -48,7 +53,16 @@ public class Exceptions3 {
         break;
       }
 
-      int studentId = Integer.parseInt(input);
+      int studentId = parseInt(input);
+      try {
+        studentId = Integer.parseInt(input);
+      }
+      catch (NumberFormatException e) {
+        System.out.println("Надо ввести целое число");
+      }
+      catch (ArrayIndexOutOfBoundsException e) {
+        System.out.println("Студента с таким номером не существует");
+      }
       System.out.println(ANSWERING + studentsJournal.get(studentId));
     }
   }

@@ -21,12 +21,8 @@ public abstract class Shape {
         dim2 = b;
     }
 
-    public double getPerimeter(){
-        return perimeter;
-    }
+    public abstract double getPerimeter();
 
-    public double getArea(){
-        return area;
-    }
+    public abstract double getArea();
 
 }

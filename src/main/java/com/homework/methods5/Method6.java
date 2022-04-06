@@ -18,7 +18,7 @@ import java.util.Scanner;
 public class Method6 {
 
     public static void main(String[] args) {
-        String username = "User";
+        String username = "user";
         signIn(username);
     }
 
