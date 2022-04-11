@@ -2,6 +2,7 @@ package com.homework.lambda_stream12;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * Перед тобой программа, которая сортирует список строк по их длине по возрастанию.
@@ -10,10 +11,12 @@ import java.util.Collections;
  * Comparator<String>), который принимает список строк и компаратор в виде лямбда-выражения.
  *
  * Твоя задача — переписать реализацию метода sortStringsByLength(ArrayList<String>),
- * чтобы вместо лямбда-выражения использовался класс StringComparator, который реализует интерфейс Comparator<String>,
+ чтобы вместо лямбда-выражения использовался класс StringComparator,
+ который реализует интерфейс Comparator<String>,
  * не меняя логику работы метода sortStringsByLength(ArrayList<String>).
  *
- * То есть нужно, чтобы в классе StringComparator метод int compare(String s1, String s2) возвращал числовое значение согласно этим условиям:
+ * То есть нужно, чтобы в классе StringComparator метод int compare(String s1, String s2)
+ возвращал числовое значение согласно этим условиям:
  *
  * отрицательное число, если длина строки s1 меньше длины строки s2;
  * положительное число, если длина строки s1 больше длины строки s2;
@@ -42,6 +45,13 @@ public class Lambda1 {
   }
 
   public static void sortStringsByLength(ArrayList<String> strings) {
-    Collections.sort(strings, (s1, s2) -> s1.length() - s2.length());
+    Comparator<String> comparator = new Comparator<String>() {
+
+      public int compare(String s1, String s2) {
+        return s1.length() - s2.length();
+      }
+    };
+    Collections.sort(strings, comparator);
   }
 }
+

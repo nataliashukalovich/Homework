@@ -4,12 +4,13 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 /**
- * У автомобиля, представленного классом Car, есть две характеристики: название - поле name, цена - поле price.
+ * У автомобиля, представленного классом Car, есть две характеристики: название - поле name,
+ цена - поле price.
  * В классе Optionals1 выполняются две операции поиска:
  *
  * метод getMostExpensiveCar(Stream<Car>) ищет самый дорогой автомобиль в одном списке;
  * метод getMoreExpensiveCar(Stream<Car>, Car) в другом списке ищет автомобиль дороже,
- * чем полученный в методе getMostExpensiveCar(Stream<Car>).
+ чем полученный в методе getMostExpensiveCar(Stream<Car>).
  * Методы возвращают не сам автомобиль (объект типа Car), а объект типа Optional<Car>.
  * Подсказка:
  * Для поиска элемента с максимальным искомым значением в потоке данных используй метод max(),
@@ -39,6 +40,12 @@ public class Optionals1 {
         new Car("X6", 125_000)
     );
 
+    Stream<Car> carStream = Stream.concat(bmw, tesla);
+
+    System.out.println(carStream
+            .max((a, b) -> a.getPrice() - b.getPrice())
+            .map(Car::getPrice).get());
+
     Optional<Car> mostExpensiveCar = getMostExpensiveCar(tesla);
     mostExpensiveCar.ifPresent(System.out::println);
 
@@ -47,8 +54,7 @@ public class Optionals1 {
   }
 
   public static Optional<Car> getMostExpensiveCar(Stream<Car> car) {
-    //напишите тут ваш код
-return Optional.empty();
+    return Optional.empty();
   }
 
   public static Optional<Car> getMoreExpensiveCar(Stream<Car> car, Car mostExpensiveCar) {

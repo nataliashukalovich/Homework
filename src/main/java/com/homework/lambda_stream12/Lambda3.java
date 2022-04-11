@@ -24,6 +24,8 @@ public class Lambda3 {
   }
 
   public static void print(ArrayList<String> strings) {
-    strings.forEach(System.out::println);
+    for (int i = 0; i < strings.size(); i++) {
+      System.out.println(strings.get(i));
+    }
   }
 }

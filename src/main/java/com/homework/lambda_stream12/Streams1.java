@@ -5,11 +5,12 @@ import java.util.Collections;
 import java.util.stream.Stream;
 
 /**
- * Класс Language представляет собой моде ль языка программирования.
+ * Класс Language представляет собой модель языка программирования.
  * В этом классе есть два поля: name - название языка программирования,
  * ranking - рейтинг использования языка программирования по состоянию на сентябрь 2021 года, согласно TIOBE.
  * Нужно, чтобы публичный статический метод sortByRanking(ArrayList<Language>)
- * сортировал полученный список языков программирования по убыванию рейтинга, и возвращал отсортированный поток данных (Stream<Language>).
+ сортировал полученный список языков программирования по убыванию рейтинга,
+ и возвращал отсортированный поток данных (Stream<Language>).
  *
  * Подсказка:
  * Поскольку поле рейтинг имеет тип Double, для сортировки нужно использовать статический метод compare(Double, Double)
@@ -40,8 +41,8 @@ public class Streams1 {
   }
 
   public static Stream<Language> sortByRanking(ArrayList<Language> languages) {
-    //напишите тут ваш код
-    return Stream.empty();
+
+    return languages.stream().sorted((a, b) -> Double.compare(a.getRanking(), b.getRanking()));
   }
 
 }

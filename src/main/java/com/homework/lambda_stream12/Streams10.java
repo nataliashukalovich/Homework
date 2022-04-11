@@ -2,6 +2,7 @@ package com.homework.lambda_stream12;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -17,15 +18,16 @@ import java.util.stream.Stream;
  */
 public class Streams10 {
 
-  public static void main(String[] args) {
-    var stringStream = Stream.of("FreeCodeCamp", "CodeGym", "Amigo", "Elly", "Kim", "Risha");
+    public static void main(String[] args) {
+        var stringStream = Stream.of("FreeCodeCamp", "CodeGym", "Amigo", "Elly", "Kim", "Risha");
 
-    getFilteredStrings(stringStream).forEach(System.out::println);
-  }
+        getFilteredStrings(stringStream).forEach(System.out::println);
+    }
 
-  public static Set<String> getFilteredStrings(Stream<String> stringStream) {
-    //напишите тут ваш код
-    return new HashSet<>();
-  }
-
+    public static Set<String> getFilteredStrings(Stream<String> stringStream) {
+        Set<String> result = stringStream
+    .filter(s -> (s.length() > 6))
+    .collect(Collectors.toSet());
+        return result;
+    }
 }

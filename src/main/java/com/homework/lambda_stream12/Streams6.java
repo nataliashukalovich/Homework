@@ -47,17 +47,14 @@ public class Streams6 {
   }
 
   public static boolean hasNegativeEvenNumbers(Stream<Integer> stream) {
-    //напишите тут ваш код
-    return false;
+    return stream.anyMatch(element -> element < 0 && element % 2 == 0);
   }
 
   public static boolean hasOnlyPositiveNumbers(Stream<Integer> stream) {
-    //напишите тут ваш код
-    return false;
+    return stream.allMatch(element -> element > 0);
   }
 
   public static boolean hasOnlyNegativeNumbers(Stream<Integer> stream) {
-    //напишите тут ваш код
-    return false;
+    return stream.noneMatch(element -> element > 0);
   }
 }

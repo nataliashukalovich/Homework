@@ -8,7 +8,8 @@ import java.util.stream.Stream;
  * Нужно, чтобы наша программа могла отфильтровать электрокары от всех остальных автомобилей.
  * Для этих целей есть метод onlyElectricCars(ArrayList<Car>),
  * который фильтрует список автомобилей, получаемых в качестве входящего параметра.
- * Этот метод возвращает поток отфильтрованных данных, а именно — поток автомобилей, у которых поле isElectric равно true.
+ * Этот метод возвращает поток отфильтрованных данных, а именно — поток автомобилей,
+ у которых поле isElectric равно true.
  * В этом тебе поможет метод filter() объекта типа Stream<Car>.
  *
  * Метод main() не принимает участие в тестировании.
@@ -31,14 +32,15 @@ public class Streams2 {
         new Car("Model X", true),
         new Car("X5", false),
         new Car("Model Y", true));
+   // cars.forEach(System.out::println);
+
 
     var carStream = onlyElectricCars(cars);
     carStream.forEach(System.out::println);
   }
 
   public static Stream<Car> onlyElectricCars(ArrayList<Car> cars) {
-    //напишите тут ваш код
-    return Stream.empty();
+    return cars.stream().filter(Car::isElectric);
   }
 
 }

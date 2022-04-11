@@ -2,6 +2,8 @@ package com.homework.lambda_stream12;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -30,7 +32,6 @@ public class Streams4 {
   }
 
   public static Stream<String> getEmails(ArrayList<Account> accounts) {
-    //напишите тут ваш код
-    return Stream.empty();
+    return accounts.stream().map(Account::getEmail);
   }
 }

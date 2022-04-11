@@ -38,6 +38,13 @@ public class Optionals2 {
         new Car("X6", 125_000)
     );
 
+    Stream<Car> carStream = Stream.concat(bmw, tesla);
+
+    System.out.println(carStream
+            .min((a,b) -> a.getPrice() - b.getPrice())
+            .map(Car::getPrice).get()
+    );
+
     Optional<Car> cheapestCar = getCheapestCar(tesla);
     cheapestCar.ifPresent(System.out::println);
 

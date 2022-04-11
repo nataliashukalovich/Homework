@@ -9,13 +9,15 @@ import java.util.stream.Stream;
  * если во входящем потоке товаров есть хотя бы один просроченный и возвращать false, если таких товаров нет.
  *
  * Чтобы это проверить,
- * нужно у каждого товара в потоке сравнить поле expirationDate (годен до) типа LocalDate с текущей датой (статический метод now() класса LocalDate).
+ * нужно у каждого товара в потоке сравнить поле expirationDate (годен до) типа LocalDate
+ с текущей датой (статический метод now() класса LocalDate).
  * Если срок годности меньше (строго) текущей даты, то в этом потоке есть просроченные товары.
  * Для поиска таких товаров в потоке используй метод anyMatch() объекта типа Stream<Product>.
  *
  * Метод main() не принимает участие в тестировании.
  * Требования:
- * •	В публичном статическом методе hasExpiredProduct(Stream<Product>) нужно вызывать метод anyMatch() объекта типа Stream<Product>.
+ * •	В публичном статическом методе hasExpiredProduct(Stream<Product>) нужно вызывать метод anyMatch()
+ объекта типа Stream<Product>.
  * •	Метод hasExpiredProduct(Stream<Product>) нужно реализовать согласно условию.
  */
 public class Streams7 {
@@ -36,11 +38,9 @@ public class Streams7 {
   }
 
   public static boolean hasExpiredProduct(Stream<Product> productStream) {
-    //напишите тут ваш код
     return false;
   }
 }
-
 class Product {
   private String name;
   private LocalDate expirationDate;
