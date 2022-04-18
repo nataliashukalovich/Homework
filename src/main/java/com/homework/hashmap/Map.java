@@ -21,6 +21,10 @@ public class Map {
   }
 
   public static void addStudents() {
-    //напишите тут ваш код
+    grades.put("Student 1", 8.6);
+    grades.put("Student 2", 7.4);
+    grades.put("Student 3", 9.1);
+    grades.put("Student 4", 5.3);
+    grades.put("Student 5", 6.0);
   }
 }

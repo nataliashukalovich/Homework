@@ -24,13 +24,17 @@ import static java.util.Arrays.asList;
 public class Set2 {
 
   public static HashSet<String> words = new HashSet<>(asList("Если бы меня попросили выбрать язык на замену Java я бы не выбирал".split(" ")));
+  private static final String CONTAINS_TEMPLATE = "Слово %s есть в множестве";
+  private static final String NOT_CONTAINS_TEMPLATE = "Слово %s отсутствует в множестве";
 
-  public static void checkWords(String word) {
-    //напишите тут ваш код
-  }
 
   public static void main(String[] args) {
     checkWords("JavaScript");
     checkWords("Java");
+  }
+  public static void checkWords(String word) {
+    System.out.println(words.contains(word) ?
+            String.format(CONTAINS_TEMPLATE, word) :
+            String.format(NOT_CONTAINS_TEMPLATE, word));
   }
 }
